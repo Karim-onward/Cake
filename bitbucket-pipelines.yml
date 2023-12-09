@@ -1,0 +1,10 @@
+# Cake Bitbucket Pipeline
+image: cakebuild/cake:sdk-7.0
+clone:
+  depth: full
+
+pipelines:
+  default:
+    - step:
+        script:
+          - ./build.sh --target="Run-Unit-Tests"
